@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div ng-app="escoladeti2017">
+      <a ui-sref="livro-list" ui-sref-active="active">Listar livros</a>
+      <a ui-sref="livro-create"  ui-sref-active="active">Criar livro</a>
+      <div class="container">
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </body>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <script src="app/livro/livro-module.js"></script>
+  <script src="app/livro/livro-routes.js"></script>
+  <script src="app/livro/livro-service.js"></script>
+  <script src="app/livro/livro-list-controller.js"></script>
+  <script src="app/livro/livro-create-controller.js"></script>
+  <script src="app.js"></script>
+</html>
