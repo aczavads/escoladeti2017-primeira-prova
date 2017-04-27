@@ -13,6 +13,13 @@ function config($stateProvider) {
         controller: 'LivroListController',
         templateUrl: 'app/livro/livro-list.html'
     };
+    var livroEdit = {
+        name: 'livro-edit',
+        url: '/livro/:id/edit',
+        controller: 'LivroEditController',
+        templateUrl: 'app/livro/livro-create.html'
+    };
     $stateProvider.state(livroCreate);
     $stateProvider.state(livroList);
+    $stateProvider.state(livroEdit);
 }

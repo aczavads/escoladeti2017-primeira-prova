@@ -1,15 +1,17 @@
 <table class="table table-striped table-bordered">
   <tr>
+    <th>ID</th>
     <th>Título</th>
     <th>Páginas</th>
     <th>Ações</th>
   </tr>
   <tr ng-repeat="livro in livros">
+    <td>{{livro.id}}</td>
     <td>{{livro.titulo}}</td>
     <td>{{livro.paginas}}</td>
     <td>
-      <button type="button" class="btn btn-primary" ng-click="confirmarExclusao(livro)">Excluir</button>
-      <button type="button" class="btn btn-primary" ng-click="entrarModoEdicao(livro)">Editar</button>
+      <button type="button" class="btn btn-primary" ng-click="confirmarExclusao(livro.id)">Excluir</button>
+      <button type="button" class="btn btn-primary" ng-click="entrarModoEdicao(livro.id)">Editar</button>
     </td>
   </tr>
 </table>

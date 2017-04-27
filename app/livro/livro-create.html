@@ -1,1 +1,13 @@
-Ulha!
+<div class="container">
+  <form name="livroForm" ng-submit="salvar(livro)" novalidate>
+    <div class="form-group">
+      <label for="titulo">Título:</label>
+      <input type="text" class="form-control" id="titulo" ng-model="livro.titulo" ng-required="true">
+    </div>
+    <div class="form-group">
+      <label for="paginas">Páginas:</label>
+      <input type="text" class="form-control" id="paginas" ng-model="livro.paginas" ng-required="true">
+    </div>
+    <button type="submit" class="btn btn-success" ng-disabled="livroForm.$invalid">Salvar</button>
+  </form>
+</div>
