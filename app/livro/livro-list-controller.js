@@ -1,7 +1,5 @@
 angular.module('livro').controller('LivroListController', LivroListController);
 
-LivroListController.$scope = ['$scope', '$state', 'LivroService'];
-
 function LivroListController($scope, $state, LivroService) {
   $scope.livros = LivroService.obterTodos();
 
@@ -14,6 +12,7 @@ function LivroListController($scope, $state, LivroService) {
   }
 
   $scope.entrarModoEdicao = function(id) {
+    //Passando o parâmetro id recebido para o atributo id que será incluído no $stateParams.
     $state.go('livro-edit', {id: id});
   }
 }
